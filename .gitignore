@@ -1,4 +1,8 @@
 .DS_Store
 node_modules
 coverage
+<<<<<<< 90d8ea24ec446002160975cf8a4f7bc4000bc233
 .idea
+=======
+dist
+>>>>>>> configuration fix
