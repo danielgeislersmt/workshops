@@ -11,25 +11,13 @@
 </head>
 
 <body ng-app="app">
-<md-content>
-    <md-toolbar>
-        <div class="md-toolbar-tools">
-            <md-button class="md-icon-button" aria-label="Settings">
-                <md-icon>menu</md-icon>
-            </md-button>
-            <h2>
-                <span>Toolbar</span>
-            </h2>
-            <span flex></span>
-            <md-button class="md-icon-button" aria-label="Favorite">
-                <md-icon style="color: greenyellow;">favorite</md-icon>
-            </md-button>
-        </div>
-    </md-toolbar>
 
-  <main ui-view>
+<md-content>
+    <ws-header></ws-header>
+
+    <main ui-view>
     Loading...
-  </main>
+    </main>
 
 </md-content>
 </body>

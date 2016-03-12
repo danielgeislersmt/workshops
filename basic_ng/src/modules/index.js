@@ -5,7 +5,7 @@ import HomePage from './home/home-page';
 import AboutPage from './about/about-page';
 
 // Initialize modules with states
-let modules = angular.module('app.modules', [
+const modules = angular.module('app.modules', [
   HomePage.name,
   AboutPage.name
 ]);
