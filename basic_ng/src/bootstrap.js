@@ -4,8 +4,9 @@ import router from 'angular-ui-router';
 import 'angular-material';
 
 import modules from './modules/modules';
+import shared from './shared/modules';
 
-angular.module('app', [ 'ngMaterial', router, modules.name ])
+angular.module('app', [ 'ngMaterial', router, modules.name, shared.name])
   .config(['$locationProvider', '$mdIconProvider', '$mdThemingProvider', ($locationProvider, $mdIconProvider, $mdThemingProvider) => {
     $locationProvider.html5Mode(true);
 
