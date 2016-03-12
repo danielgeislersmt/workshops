@@ -1,6 +1,5 @@
 import angular from 'angular';
 import router from 'angular-ui-router';
-
 import 'angular-material';
 
 import modules from './modules';

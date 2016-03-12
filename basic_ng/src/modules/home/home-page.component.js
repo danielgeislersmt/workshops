@@ -3,37 +3,20 @@ import router from 'angular-ui-router';
 
 import './home-page.css';
 
-class HomePageCtrl {
-
-  /**
-   * Constructor for HomePageCtrl
-   */
-  constructor($scope, $state, $window) {
-    this.name = 'YO!';
-
-    // sample injects into ES6 class
-    console.log($scope);
-    console.log($state);
-    console.log($window);
-  }
-
-}
-
-// Angular DI
-HomePageCtrl.$inject = ['$scope', '$state', '$window'];
+import HomePageCtrl from './home-page.controller';
 
 /**
  * Decorate current module with routes.
  *
  * Very similar to @RouterConfig decorator in Angular2
  */
-let homePageRoutes = ['$stateProvider', '$urlRouterProvider', ($stateProvider, $urlRouterProvider) => {
+let routes = ['$stateProvider', '$urlRouterProvider', ($stateProvider, $urlRouterProvider) => {
   $urlRouterProvider.otherwise('/');
 
   $stateProvider
     .state('home', {
       url: '/',
-      template: '<home-page></home-page>'
+      template: '<ws-home-page></ws-home-page>'
     });
 }];
 
@@ -42,7 +25,7 @@ let homePageRoutes = ['$stateProvider', '$urlRouterProvider', ($stateProvider, $
  *
  * Very similar to @Component decorator in Angular2
  */
-let homePageComponent = {
+let component = {
   restrict: 'E',
   template: require('./home-page.html'),
   controller: HomePageCtrl,
@@ -51,5 +34,5 @@ let homePageComponent = {
 };
 
 export default angular.module('app.home', [ router ])
-  .config(homePageRoutes)
-  .component('homePage', homePageComponent);
+  .config(routes)
+  .component('wsHomePage', component);
