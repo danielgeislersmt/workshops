@@ -1,11 +1,2 @@
-<div layout="row" layout-sm="column" layout-align="space-around" ng-if="!foodCtrl.foodlist">
-    <md-progress-circular></md-progress-circular>
-</div>
-
-<md-list ng-if="foodCtrl.foodlist">
-    <md-subheader class="md-no-sticky">Products</md-subheader>
-    <md-list-item ng-repeat="food in foodCtrl.foodlist">
-            <p> {{ food.name }} </p>
-    </md-list-item>
-
-</md-list>
+<h2>Food Page</h2>
+<div ui-view></div>

@@ -5,14 +5,24 @@ import FoodPageCtrl from './food-page.controller';
 
 const routes = ['$stateProvider', ($stateProvider) => {
   $stateProvider
+
+    // Main view
     .state('food', {
+      abstract: true,
       url: '/food',
       template: '<ws-food-page></ws-food-page>'
     })
-    //FIXME: substate is not working
-    .state('foodAdd', {
+
+    // List sub view
+    .state('food.list', {
+        url: '/',
+        template: require('./list/food-list.component.html')
+    })
+
+    // Form sub view
+    .state('food.add', {
         url: '/add',
-        template: require('./food-form.component.html')
+        template: require('./form/food-form.component.html')
     });
 }];
 
