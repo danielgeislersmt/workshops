@@ -13,7 +13,8 @@ let routes = ['$stateProvider', ($stateProvider) => {
 
 let component = {
   template: require('./food-page.component.html'),
-  controller: FoodPageCtrl
+  controller: FoodPageCtrl,
+  controllerAs: 'foodCtrl'
 };
 
 export default angular.module('app.food', [ router ])
