@@ -4,16 +4,15 @@ class FoodPageCtrl {
    * Constructor for FoodPageCtrl
    */
   constructor(foodService) {
-    this.foodlist = [
-      { name: 'Pizza peperoni', type: 'pizza', vege: false },
-      { name: 'Pizza mascarpone', type: 'pizza', vege: true }
-    ];
+    this.foodlist = false;
 
-    foodService.fetch();
+    foodService.fetch().then((resp) => {
+        this.foodlist = resp.data;
+    });
   }
 
 }
 
-FoodPageCtrl.$inject = ['FoodService']
+FoodPageCtrl.$inject = ['FoodService'];
 
 export default FoodPageCtrl;
