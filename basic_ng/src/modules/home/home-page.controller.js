@@ -1,4 +1,4 @@
-export default class HomePageCtrl {
+class HomePageCtrl {
 
   /**
    * Constructor for HomePageCtrl
@@ -17,3 +17,5 @@ export default class HomePageCtrl {
 
 // Angular DI
 HomePageCtrl.$inject = ['$scope', '$state', '$window'];
+
+export default HomePageCtrl;

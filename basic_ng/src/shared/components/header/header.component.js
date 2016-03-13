@@ -5,7 +5,7 @@ import HeaderCtrl from './header.controller';
 
 const headerComponent = {
   restrict: 'E',
-  template: require('./header.html'),
+  template: require('./header.component.html'),
   controller: HeaderCtrl,
   controllerAs: 'header',
   bindings: {}

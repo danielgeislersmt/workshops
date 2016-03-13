@@ -1,7 +1,7 @@
 import angular from 'angular';
 import router from 'angular-ui-router';
 
-import './home-page.css';
+import './home-page.component.css';
 
 import HomePageCtrl from './home-page.controller';
 
@@ -27,7 +27,7 @@ let routes = ['$stateProvider', '$urlRouterProvider', ($stateProvider, $urlRoute
  */
 let component = {
   restrict: 'E',
-  template: require('./home-page.html'),
+  template: require('./home-page.component.html'),
   controller: HomePageCtrl,
   controllerAs: 'home',
   bindings: {}

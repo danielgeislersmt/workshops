@@ -10,7 +10,7 @@ let routes = ['$stateProvider', ($stateProvider) => {
 }];
 
 let component = {
-  template: require('./about-page.html')
+  template: require('./about-page.component.html')
 };
 
 export default angular.module('app.about', [ router ])

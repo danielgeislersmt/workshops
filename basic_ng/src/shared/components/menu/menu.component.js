@@ -5,7 +5,7 @@ import MenuCtrl from './menu.controller';
 
 const menuComponent = {
   restrict: 'E',
-  template: require('./menu.html'),
+  template: require('./menu.component.html'),
   controller: MenuCtrl,
   controllerAs: 'menu',
   bindings: {}
