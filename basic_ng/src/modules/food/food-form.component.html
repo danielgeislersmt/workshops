@@ -1,0 +1,39 @@
+<h1>Add food</h1>
+
+<form name="foodForm" novalidate>
+    <md-input-container class="md-block">
+        <label>Name</label>
+        <input ng-model="food.name" name="name" required minlength="3" maxlength="20">
+
+        <div ng-messages="foodForm.name.$error">
+            <div ng-message="required">This is required.</div>
+            <div ng-message="minlength">The name has to be more than 3 characters long.</div>
+            <div ng-message="maxlength">The name has to be less than 20 characters long.</div>
+        </div>
+    </md-input-container>
+
+    <md-input-container class="md-block">
+        <label>Categories</label>
+        <md-select ng-model="food.categories" name="categories" multiple="true" required>
+            <md-option ng-value="cat" ng-repeat="cat in ['Category #1', 'Category #2', 'Category #3']">{{ cat }}</md-option>
+        </md-select>
+        <div ng-messages="foodForm.categories.$error">
+            <div ng-message="required">This is required.</div>
+        </div>
+    </md-input-container>
+
+    <md-input-container class="md-block">
+        <label>Description</label>
+        <textarea ng-model="food.description" name="description" maxlength="150" minlength="5" rows="5" md-select-on-focus required></textarea>
+        <div ng-messages="foodForm.description.$error">
+            <div ng-message="required">This is required.</div>
+            <div ng-message="minlength">The name has to be more than 5 characters long.</div>
+            <div ng-message="maxlength">The name has to be less than 150 characters long.</div>
+        </div>
+    </md-input-container>
+
+    <div class="md-block">
+        <md-button class="md-primary md-raised" ng-disabled="foodForm.$pristine || foodForm.$invalid">Add</md-button>
+    </div>
+
+</form>

@@ -1,12 +1,13 @@
 import angular from 'angular';
 import router from 'angular-ui-router';
 import 'angular-material';
+import 'angular-messages';
 
 import modules from './modules';
 import components from './shared/components';
 import services from './shared/services';
 
-angular.module('app', [ 'ngMaterial', router, modules.name, components.name, services.name ])
+angular.module('app', [ 'ngMaterial', 'ngMessages', router, modules.name, components.name, services.name ])
   .config([
     '$locationProvider',
     '$mdIconProvider',
