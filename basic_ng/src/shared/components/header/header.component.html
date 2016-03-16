@@ -3,9 +3,19 @@
         <ws-menu></ws-menu>
 
         <h2>
-            <span>Toolbar</span>
+            <span>WORKSHOP</span>
         </h2>
+
+        <md-button ui-sref="home">home</md-button>
+        <md-button ui-sref="food.list">food list</md-button>
+        <md-button ui-sref="about">about</md-button>
+
         <span flex></span>
+
+        <md-button class="md-fab md-raised md-mini" aria-label="Go to basket">
+            <a ui-sref="basket"><md-icon>shopping_cart</md-icon></a>
+        </md-button>
+
         <md-button class="md-fab md-raised md-mini" aria-label="Add new food">
             <a ui-sref="food.add"><md-icon>add</md-icon></a>
         </md-button>

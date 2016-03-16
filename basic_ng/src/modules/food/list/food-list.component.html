@@ -2,10 +2,16 @@
     <md-progress-circular></md-progress-circular>
 </div>
 
-<md-list ng-if="foodCtrl.foodlist">
-    <md-subheader class="md-no-sticky">Products</md-subheader>
-    <md-list-item ng-repeat="food in foodCtrl.foodlist">
-            <p> {{ food.name }} </p>
-    </md-list-item>
+<md-input-container class="md-block" ng-if="foodCtrl.foodlist.length">
+    <label>Search</label>
+    <input ng-model="foodCtrl.search.name" name="name">
+</md-input-container>
 
+<md-list ng-if="foodCtrl.foodlist.length">
+  <md-subheader class="md-no-sticky">Products</md-subheader>
+  <md-list-item ng-repeat="food in foodCtrl.foodlist | filter:foodCtrl.search">
+    <p> {{ food.name }} </p>
+    <md-button class="md-secondary">Buy</md-button>
+    <md-divider ng-if="!$last"></md-divider>
+  </md-list-item>
 </md-list>

@@ -4,13 +4,16 @@ class FoodPageCtrl {
    * Constructor for FoodPageCtrl
    */
   constructor(foodService, $mdToast) {
-    this.foodlist = false;
+    this.foodlist = [];
     this.$mdToast = $mdToast;
     foodService.fetch().then((resp) => {
         this.foodlist = resp.data;
     });
 
-
+    // Search
+    this.search = {
+        name: ''
+    };
   }
 
   addForm() {

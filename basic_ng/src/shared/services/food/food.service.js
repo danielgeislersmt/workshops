@@ -1,7 +1,5 @@
 class FoodService {
 
-
-
     constructor($http) {
         this.api = $http;
         this.url = 'http://private-7363b-smtangularjs.apiary-mock.com/products';
