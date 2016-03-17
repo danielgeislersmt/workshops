@@ -41,7 +41,7 @@ module.exports = function makeWebpackConfig () {
    */
   config.output = isTest ? {} : {
     // Absolute output directory
-    path: __dirname + '/dist',
+    path: __dirname + '/build',
 
     // Output path from the view of the page
     // Uses webpack-dev-server in development
@@ -64,7 +64,7 @@ module.exports = function makeWebpackConfig () {
   if (isTest) {
     config.devtool = 'inline-source-map';
   } else if (isProd) {
-    config.devtool = 'source-map';
+    config.devtool = false;
   } else {
     config.devtool = 'eval-source-map';
   }
